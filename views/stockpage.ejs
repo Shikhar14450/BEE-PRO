@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/top.ejs') %>
+
+    <div class="stockpage">
+    <div class="stockpageleft">
+    <div class="stock">
+            <div class="sharename">MRF</div>
+            <div class="shareinfo">
+                <div class="shareprice">$567,765</div>
+                <div class="plpercent" id="shareprofit">3.4%</div>
+            </div>
+    </div>
+
+    <div class="graph">
+    <div class="graphchart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 524 263">
+            <path d="M13.9787 165.747L0 214.473V262.799H524V93.8567L496.043 56.314L470.881 0L445.72 12.3811L420.957 35.9451L402.186 56.314H380.22L366.241 83.0732L334.689 106.238L298.744 131.399L286.363 165.747L276.777 150.171L264.396 115.823L247.223 106.238L226.854 93.8567L201.692 56.314H182.921L173.735 83.0732L136.192 106.238L119.018 131.399L87.4665 150.171L70.2927 131.399H57.9116L42.3354 165.747L28.3567 179.726L13.9787 165.747Z" fill="url(#paint0_linear_21_133)"/>
+            <defs>
+              <linearGradient id="paint0_linear_21_133" x1="262" y1="0" x2="262" y2="262.799" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#00CD44" stop-opacity="0.78"/>
+                <stop offset="1" stop-color="#D7FFE4" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+    </div>
+    <!-- <div class="graphtimeline">
+        <div class="menutab">TODAY</div>
+        <div class="menutab">1D</div>
+        <div class="menutab">1W</div>
+        <div class="menutab">1M</div>
+        <div class="menutab">1Y</div>
+    </div> -->
+</div>
+
+<div class="stockinfo">
+    <div class="stockinfotitle">OVERVIEW</div>
+    <DIV class="stats">
+        <div class="stat" >
+            <div class="stattitle">PREVIOUS CLOSE</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">TOTAL TRADED VALUE</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">UPPER CIRCUIT</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">LOWER CIRCUIT</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">VOLUME</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">OPEN</div>
+            <div class="statamount">$854798</div>
+        </div>
+    </DIV>
+</div>
+
+<div class="stockinfo">
+    <div class="stockinfotitle">FUNDAMENTALS</div>
+    <DIV class="stats">
+        <div class="stat" >
+            <div class="stattitle">Market Cap</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">ROE</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">P/E Ratio(TTM)</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">EPS(TTM)</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">P/B Ratio</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">Dividend Yield</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">Industry P/E</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">Book Value</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">Debt to Equity</div>
+            <div class="statamount">$854798</div>
+        </div>
+        <div class="stat" >
+            <div class="stattitle">Face Value</div>
+            <div class="statamount">$854798</div>
+        </div>
+    </DIV>
+</div>
+</div>
+
+    <div class="stockpageright">
+    <!-- <div class="stockholdinfo">
+        <div class="shareinfo">
+            <div class="sharesummary">
+                <div class="shareqty">7 SHARES</div>
+                <div class="shareavg">AVG PRICE $432</div>
+            </div>
+            <div class="shareprice">$567,765</div>
+            <div class="plpercent" id="shareprofit">3.4%</div>
+            
+        </div>
+    </div> -->
+
+    <div class="stockbuy">
+        <form action="/index" method="POST">
+            <input type="hidden" id="filename" name="sname" value="MRF">
+        
+            <div class="formcell">
+                <label for="quantity">QUANTITY:</label>
+                <input type="number" id="quantity" name="quantity">
+            </div>  
+            <div class="formcell">
+                <label for="purchasedate">PURCHASE DATE:</label>
+                <input type="date" id="purchasedate" name="purchasedate">
+            </div> 
+            <div class="formcell">
+                <label for="purchaseprice">PURCHASE PRICE:</label>
+                <input type="number" id="purchaseprice" name="purchaseprice">
+            </div> 
+            <div><input type="submit" value="Buy"></div>
+        </form>
+
+        <div class="stockbuybottom">
+        <div>
+            <span class="totalpurchaseprice">Total Amount  </span>
+            <span class="totalpurchasepriceamount">$8596</span>
+        </div>
+
+        
+    </div>
+        
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>

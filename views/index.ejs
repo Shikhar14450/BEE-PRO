@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+    <%- include('./partials/top.ejs') %>
+
+    <!-- <div >
+        <form class="search">
+            <input type="search" placeholder="Search">
+            <button type="submit"></button>
+          </form>
+    </div> -->
+
+<div class="hero">
+
+    <div class="portfolio">
+        <div class="stats">
+            <div class="stat" >
+                <div class="stattitle">CURRENT BAL</div>
+                <div class="statamount">$854798</div>
+                <!-- <div class="statpercent">
+                    <div class="statpercenticon">
+                    </div>
+                    <div class="statpercentnumber"></div>
+                </div> -->
+            </div>
+
+            <div class="stat" id="statprofit">
+                <div class="stattitle">TOTAL RETURNS</div>
+                <div class="statamount">$854798</div>
+                <div class="statpercent">
+                    <div class="statpercenticon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+                            <g clip-path="url(#clip0_23_346)">
+                              <path d="M3 9.5L4.0575 10.5575L8.25 6.3725V15.5H9.75V6.3725L13.935 10.565L15 9.5L9 3.5L3 9.5Z" />
+                            </g>
+                          </svg>
+                    </div>
+                    <div class="statpercentnumber">13%</div>
+                </div>
+            </div>
+
+            <div class="stat" >
+                <div class="stattitle">INVESTED AMOUNT</div>
+                <div class="statamount">$854798</div>
+                <!-- <div class="statpercent">
+                    <div class="statpercenticon">
+                    </div>
+                    <div class="statpercentnumber"></div>
+                </div> -->
+            </div>
+
+            <div class="stat" id="statloss">
+                <div class="stattitle">1D RETURNS</div>
+                <div class="statamount">$854798</div>
+                <div class="statpercent">
+                    <div class="statpercenticon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+                            <g clip-path="url(#clip0_23_346)">
+                              <path d="M3 9.5L4.0575 10.5575L8.25 6.3725V15.5H9.75V6.3725L13.935 10.565L15 9.5L9 3.5L3 9.5Z" />
+                            </g>
+                          </svg>
+                    </div>
+                    <div class="statpercentnumber">13%</div>
+                </div>
+            </div>
+        </div>
+        <div class="investments">
+            <!-- <div class="investment">
+                <div class="sharename">MRF</div>
+                <div class="shareinfo">
+                    <div class="shareprice">$567,765</div>
+                    <div class="plpercent" id="shareprofit">3.4%</div>
+                    <div class="sharesummary">
+                        <div class="shareqty">7 SHARES</div>
+                        <div class="shareavg">AVG PRICE $432</div>
+                    </div>
+                </div>
+            </div>  -->
+
+
+            <% sharesbought.forEach(boughtshare => { %>
+            <div class="investment">
+                <a href="/mrf"><div class="sharename"><%= boughtshare.sname %></div></a>
+                <div class="shareinfo">
+                    <div class="shareprice">$<%= boughtshare.quantity * boughtshare.purchaseprice %></div>
+                    <div class="plpercent" id="shareprofit">3.4%</div>
+                    <div class="sharesummary">
+                        <div class="shareqty"><%=boughtshare.quantity%> SHARES</div>
+                        <div class="shareavg">AVG PRICE <%=boughtshare.purchaseprice%></div>
+                        <div><a class="delete" data-doc="<%= boughtshare._id%>">Delete</a></div>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+
+
+        </div>
+    </div>
+
+    <div class="suggestions">
+        <a href="/mrf">
+        <div class="suggestion">
+            <div class="sharename">MRF</div>
+                <div class="shareinfo">
+                    <div class="shareprice">$567,765</div>
+                    <div class="plpercent" id="shareprofit">3.4%</div>
+                </div>
+        </div>
+        </a>
+
+        <a href="/jiofin">
+            <div class="suggestion">
+                <div class="sharename">JIO FIN</div>
+                    <div class="shareinfo">
+                        <div class="shareprice">$567,765</div>
+                        <div class="plpercent" id="shareprofit">3.4%</div>
+                    </div>
+            </div>
+            </a>
+
+        <a href="zomato">
+                <div class="suggestion">
+                    <div class="sharename">Zomato</div>
+                        <div class="shareinfo">
+                            <div class="shareprice">$567,765</div>
+                            <div class="plpercent" id="shareprofit">3.4%</div>
+                        </div>
+                </div>
+         </a>
+
+         <a href="/iocl">
+            <div class="suggestion">
+                <div class="sharename">IOCL</div>
+                    <div class="shareinfo">
+                        <div class="shareprice">$567,765</div>
+                        <div class="plpercent" id="shareprofit">3.4%</div>
+                    </div>
+            </div>
+        </a>
+      
+    
+        
+        
+        </div>
+        
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

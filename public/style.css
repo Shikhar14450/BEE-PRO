@@ -1,0 +1,578 @@
+body{
+    font-family: inter;
+    background: #F0F1F5;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    margin-bottom: 10vh;
+
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.menuname{
+/* color: white; */
+font-family: inter;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.menuicon{
+    width: 1.24169rem;
+height: 1.24169rem;
+stroke: #666B89;
+}
+
+.menutab{
+    display: flex;
+padding: 0.48288rem 1.10375rem;
+align-items: center;
+gap: 0.55188rem;
+border-radius: 0.55188rem;
+background: var(--white, #FFF);
+/* background: red; */
+color: var(--Brand-Greys-text-2, #666B89);
+}
+
+.menutab:hover{
+    background: #9599B4;
+    color: white;
+
+}
+.menutab:hover .menuicon{
+    stroke: white;
+
+}
+
+.search{
+    display: flex;
+width: 26.125rem;
+padding: 0.5rem 1.5rem;
+justify-content: space-between;
+align-items: center;
+border-radius: 0.6875rem;
+background: var(--white, #FFF);
+}
+
+.search input[type=search]{
+    color: var(--Brand-Greys-text-2, #666B89);
+font-family: Inter;
+font-size: 1.2rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.03725rem;
+border: none;
+}
+
+.search input[type=search]:focus{
+    border: none;
+}
+
+
+
+
+#tabactive{
+    background: var(--Brand-Blues-primary, #20294C);
+    color: var(--white, #FFF);
+    stroke: #FFF;
+}
+
+
+
+#tabactive .menuicon{
+    stroke: #FFF;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+.menu{
+    display: flex;
+padding: 0.62088rem;
+align-items: center;
+align-self: end;
+gap: 0.62088rem;
+border-radius: 1.17269rem;
+background: var(--bg-illustration-2, #EBEBF2);
+}
+
+.top{
+    display: flex;
+/* height: 8.125rem; */
+padding: 3vh 3vw 0 0;
+align-items: flex-end;
+justify-content: flex-end;
+gap: 3.1875rem;
+align-self: stretch;
+}
+
+.logo{
+    width: 3.3125rem;
+height: 3.3125rem;
+flex-shrink: 0;
+    background: url(https://em-content.zobj.net/source/apple/81/money-with-wings_1f4b8.png) #F0F1F5 0% / cover no-repeat;
+}
+
+.hero{
+    display: flex;
+justify-content: center;
+align-items: flex-start;
+gap: 2.5rem;
+}
+
+
+.portfolio{
+    display: flex;
+width: 37rem;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 7vh;
+padding: 2.7rem;
+flex-direction: column;
+align-items: center;
+gap: 2rem;
+border-radius: 2.6875rem;
+background: var(--white, #FFF);
+justify-self: center;
+
+}
+
+.stats{
+    display: flex;
+/* width: 37.0625rem; */
+/* padding: 1.1875rem 2.1875rem; */
+justify-content: space-between;
+align-items: center;
+align-content: center;
+row-gap: 0.8125rem;
+flex-wrap: wrap;
+}
+
+
+
+.stat{
+    display: flex;
+padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+align-items: center;
+gap: 0.3125rem;
+border-radius: 0.7rem;
+background: var(--bg-illustration-2, #EBEBF2);
+}
+
+.stattitle{
+    color: var(--Brand-Blues-primary, #20294C);
+font-family: Inter;
+font-size: 0.75rem;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+
+.statamount{
+    display: flex;
+padding: 0.1875rem 0.5625rem;
+justify-content: center;
+align-items: center;
+gap: 0.625rem;
+border-radius: 0.4375rem;
+background: var(--white, #FFF);
+color: var(--Brand-Blues-primary, #20294C);
+font-family: Inter;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.statpercent{
+    display: flex;
+padding: 0.125rem 0.25rem;
+align-items: center;
+gap: 0.25rem;
+border-radius: 0.5rem;
+/* background: #E6F4EA; */
+}
+
+.statpercenticon{
+    width: 1.125rem;
+height: 1.125rem;
+}
+
+.statpercentnumber{
+    /* color: #137333; */
+font-family: Inter;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+#statprofit svg{
+    fill: #137333;
+}
+#statprofit .statamount{
+    color: #137333;
+}
+#statprofit .statpercentnumber{
+    color: #137333;
+}
+#statprofit .statpercent{
+    background: #E6F4EA;
+}
+
+#statloss svg{
+    fill: #af0e0e;
+}
+#statloss .statamount{
+    color: #af0e0e;
+}
+#statloss .statpercentnumber{
+    color: #af0e0e;
+}
+#statloss .statpercent{
+    background: #FCE8E6;
+}
+
+
+.investments{
+    display: flex;
+padding: 0rem 0.625rem;
+flex-direction: column;
+align-items: flex-start;
+gap: 1rem;
+align-self: stretch;
+
+}
+
+.investment{
+    display: flex;
+padding: 0.5625rem 1.375rem;
+justify-content: space-between;
+align-items: center;
+align-self: stretch;
+border-radius: 0.6875rem;
+border: 2px solid var(--bg-illustration-2, #EBEBF2);
+background: var(--white, #FFF);
+}
+
+.sharename{
+    color: var(--Brand-Blues-primary, #20294C);
+font-family: Inter;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.0375rem;
+}
+
+.shareinfo{
+    display: flex;
+align-items: center;
+justify-content:space-evenly;
+gap: 1.125rem;
+}
+
+.stockinfo .stats{
+    width: 30vw;
+    
+}
+
+
+.shareprice{
+    color: var(--Brand-Blues-primary, #20294C);
+font-family: Inter;
+font-size: 1.0625rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.03188rem;
+}
+
+.plpercent{
+    display: flex;
+padding: 0.4375rem;
+align-items: center;
+gap: 0.25rem;
+border-radius: 0.5rem;
+background: #E6F4EA;
+color: #137333;
+font-family: Inter;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+#shareloss{ 
+    background: #FCE8E6;
+    color: #AF0E0E;
+}
+
+.sharesummary{
+    display: flex;
+/* width: 6.5rem; */
+flex-direction: column;
+align-items: flex-start;
+gap: 0.1875rem;
+}
+
+.shareqty{
+    align-self: stretch;
+    color: var(--Brand-Blues-primary, #20294C);
+font-family: Inter;
+font-size: 0.9375rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.02813rem;
+}
+
+.shareavg{
+    align-self: stretch;
+    color: var(--Brand-Blues-primary, #20294C);
+font-family: Inter;
+font-size: 0.6875rem;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+letter-spacing: 0.02063rem;
+text-transform: uppercase;
+}
+
+.suggestions{
+    display: flex;
+width: 20rem;
+align-items: flex-start;
+align-content: flex-start;
+gap: 1rem;
+flex-wrap: wrap;
+}
+
+.suggestion{
+    width: 5rem;
+    display: flex;
+padding: 1rem 2rem 1rem 1.2rem;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.5625rem;
+border-radius: 1.5rem;
+border: 2px solid var(--bg-illustration-2, #EBEBF2);
+background: var(--white, #FFF);
+}
+
+.suggestion .shareinfo{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 0.5rem;
+}
+
+.stockpage{
+    display: inline-flex;
+align-items: flex-start;
+gap: 6vw;
+justify-content: space-between;
+
+/* padding: 0 10vw; */
+}
+
+
+.stockpageleft{
+    display: flex;
+/* width: 32.75rem; */
+flex-direction: column;
+align-items: flex-start;
+gap: 5.8125rem;
+}
+
+
+.stock{
+    display: flex;
+width: 20rem;
+padding: 0.4rem 1.2rem;
+justify-content: space-between;
+align-items: center;
+border-radius: 0.8rem;
+/* border: 0.25rem solid var(--bg-illustration-2, #EBEBF2); */
+background: var(--white, #FFF);
+}
+
+.graph{
+    display: flex;
+flex-direction: column;
+align-items: center;
+gap: 1rem;
+align-self: stretch;
+}
+
+.graphchart{
+    fill: linear-gradient(180deg, rgba(0, 205, 68, 0.78) 0%, rgba(215, 255, 228, 0.00) 100%);
+    width: 32vw;
+/* height: 16.42494rem; */
+flex-shrink: 0;
+}
+
+.graphtimeline{
+    display: flex;
+align-items: center;
+gap: 1.2rem;
+}
+
+.graphtimeline .menutab{
+    padding: 0.4rem 0.8rem;
+    font-size: 0.875rem;
+}
+
+.graphtime{
+    display: flex;
+padding: 0.4rem 0.8rem;
+align-items: center;
+/* gap: 0.5rem; */
+border-radius: 0.5rem;
+border: 0.5px solid #E3E3E3;
+background: var(--white, #FFF);
+color: var(--Brand-Greys-text-2, #666B89);
+font-family: Inter;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+
+.stockpageright{
+    display: flex;
+/* width: 40vw; */
+/* width: fit-content; */
+flex-direction: column;
+align-items: flex-start;
+gap: 1.6rem;
+}
+
+.stockinfo{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 1.5rem;
+align-self: stretch;
+}
+
+
+.stockinfotitle{
+    align-self: stretch;
+    color: var(--Brand-Blues-primary, #20294C);
+font-family: Inter;
+font-size: 1.375rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.stockholdinfo{
+    /* width: max-content; */
+    /* display: flex; */
+padding: 1.5rem 1.5rem;
+justify-content: space-between;
+align-items: center;
+
+align-self: stretch;
+border-radius: 1.375rem;
+background: var(--white, #FFF);
+}
+
+.stockbuy{
+    /* align-self: stretch; */
+    color: var(--Brand-Blues-primary, #20294C);
+font-family: Inter;
+font-size: 0.9rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.02813rem;
+
+display: flex;
+padding: 1.3rem 1.4rem;
+flex-direction: column;
+align-items: flex-start;
+gap: 1.8rem;
+align-self: stretch;
+
+border-radius: 1.375rem;
+background: var(--white, #FFF);
+
+}
+
+
+
+.stockbuy input{
+    width: 5.75rem;
+    height: 1.7rem;
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.6rem;
+/* border: 0.1rem solid var(--bg-illustration-2, #EBEBF2); */
+border:none;
+/* background: var(--white, #FFF); */
+background: #f4f4f5;
+}
+
+.stockbuy form{
+    display: flex;
+flex-direction: column;
+/* align-items: center; */
+gap: 0.75rem;
+align-self: stretch;
+justify-items: center;
+
+}
+
+.stockbuy .formcell{
+    display: flex;
+justify-content: space-between;
+align-items: center;
+align-self: stretch;
+}
+
+.stockbuy input[type=date]{
+    height: 1.67rem;
+    /* width: auto; */
+}
+
+.stockbuy input[type=submit]{
+    display: flex;
+/* width: 5.25rem; */
+
+height: auto;
+width: auto;
+padding: 0.5rem 1rem;
+justify-content: center;
+align-items: center;
+/* gap: 0.5rem; */
+border-radius: 0.5rem;
+background: var(--Brand-Blues-primary, #20294C);
+
+color: var(--white, #FFF);
+font-family: Inter;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.stockbuybottom{
+    display: flex;
+flex-direction: column;
+align-items: center;
+gap: 1rem;
+align-self: stretch;
+}
